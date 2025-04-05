@@ -29,6 +29,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+
+
 body {
 	line-height: 1;
 }
@@ -159,7 +161,11 @@ input, select, textarea {
 		color: inherit;
 	}
 
-	h2, h3, h4, h5, h6 {
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+	h2, h3, h5, h6 {
 		font-weight: 700;
 	}
 
@@ -181,6 +187,12 @@ input, select, textarea {
 	h3 {
 		font-size: 1.5em;
 		letter-spacing: -0.015em;
+	}
+
+	h4 {
+		font-size: 1.2em;
+		letter-spacing: -0.015em;
+		font-weight: 550;
 	}
 
 	em, i {
@@ -480,7 +492,7 @@ input, select, textarea {
 		}
 
 			.row > * {
-				padding: 25px 0 0 25px;
+				padding: 5px 0 0 25px;
 			}
 
 			.row.gtr-uniform {
@@ -1686,7 +1698,7 @@ input, select, textarea {
 		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #43B3E0;
+		background-color: #696969;
 		padding: 1em 2.35em 1em 2.35em;
 		font-size: 1.1em;
 		max-width: 24em;
@@ -1697,7 +1709,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #43bff0;
+			background-color: #f0b943;
 			color: #fff !important;
 		}
 
@@ -1974,7 +1986,7 @@ input, select, textarea {
 		}
 
 		.icon.featured {
-			color: #EA8A95;
+			color: #181a18;
 			display: block;
 			margin: 0 0 1.5em 0;
 			cursor: default;
@@ -1989,7 +2001,7 @@ input, select, textarea {
 	.wrapper {
 		background-image: url("images/bg.png");
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-		padding: 8em 0 8em 0;
+		padding: 1.5em 0 1.5em 0;
 		text-align: center;
 	}
 
@@ -2105,7 +2117,7 @@ input, select, textarea {
 	}
 
 	#top {
-		padding: 10em 0 10em 0;
+		padding: 3em 0 3em 0;
 		text-align: left;
 	}
 
@@ -2383,6 +2395,7 @@ input, select, textarea {
 			.wrapper {
 				padding: 3em 0;
 				text-align: center;
+				
 			}
 
 		/* Nav */
@@ -2390,6 +2403,7 @@ input, select, textarea {
 			#nav {
 				height: 44px;
 				line-height: 44px;
+				
 			}
 
 				#nav a {
@@ -2441,5 +2455,14 @@ input, select, textarea {
 					#copyright li:first-child {
 						margin-top: 0;
 					}
+	}
 
+	.workimage{
+		width: 6em; 
+		height: 6em;
+		border-radius: 100%;
+	}
+
+	.noBottomPadding{
+		margin-bottom: 0;
 	}
