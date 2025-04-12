@@ -102,7 +102,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Open Sans', sans-serif;
 		line-height: 1.85em;
-		color: #888;
+		color: #000000;
 		font-weight: 300;
 		font-size: 13pt;
 	}
@@ -304,7 +304,7 @@ input, select, textarea {
 		display: flex;
 		flex-wrap: wrap;
 		box-sizing: border-box;
-		align-items: stretch;
+		align-items: stretch; /* Ensures all child elements have the same height */
 	}
 
 		.row > * {
@@ -750,7 +750,7 @@ input, select, textarea {
 							padding-top: 25px;
 						}
 
-				.row.gtr-150 {
+					.row.gtr-150 {
 					margin-top: -37.5px;
 					margin-left: -37.5px;
 				}
