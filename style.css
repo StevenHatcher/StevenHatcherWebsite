@@ -717,9 +717,38 @@ h1{
   
 }
 
+.mobile-nav-menu{
+  display: none;
+  font-size: 1.5em;
+  background: none;
+  color: #dedede;
+  border: none;
+  cursor: pointer;
+}
 
+/* By default, show nav links in a row */
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+button .mobile{
+  visibility: hidden;
+}
+
+
+/* MOBILE SETTINGS */
 @media (max-width: 768px) {
+  body{
+    width: 100vw;
+  }
   /* Stack flex containers vertically */
+  .landing-title-section.project-title{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
+
   .container,
   .tile-row,
   .section-row,
@@ -733,8 +762,8 @@ h1{
   .tile,
   .section-tile,
   .section-tile.image,
-  .section-tile.text,
-  .section-tile.full-width {
+  .section-tile.text
+  {
     width: 100%;
     max-width: 100%;
     flex: unset;
@@ -758,10 +787,35 @@ h1{
     display: none;
   }
 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #121212;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1em;
+    border-top: 1px solid #333;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .mobile-nav-menu{
+    display: block;
+    margin-left: auto;
+  }
+
   /* Optional: stack nav links vertically if needed */
   nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .section-row.title{
+    margin-left: 0;
   }
 
   nav div {
@@ -775,14 +829,94 @@ h1{
     padding: 0.5em 0;
   }
 
-  img.fourty-percent,
-img.sixty-percent,
-img.eighty-percent,
-.section-tile.fourty-percent,
-.section-tile.sixty-percent,
-.section-tile.eighty-percent {
-  width: 100%;
-  max-width: 100%;
+  nav a.nav-left {
+    margin-bottom: 0.5em;
+  }
+
+  img.fourty-percent, img.sixty-percent, img.eighty-percent, .section-tile.fourty-percent, .section-tile.sixty-percent, .section-tile.eighty-percent {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section, .section-tile{
+    text-align: center;
+    align-items: center;
+  }
+
+  .landing h4{
+
+    font-weight: normal;
+  }
+  .section h2{
+    position: relative;
+    
+    padding-bottom: 4px;
+    margin-top: 1.4em;
+    
+    font-weight: bolder;
+  }
+  .section h2 :before{
+    background: linear-gradient(to left, #2d2d2d 0%, transparent 100%);
+  }
+
+  .section h3{
+    margin-top: 0.7em;
+    margin-bottom: .5em;
+  }
+  
+
+  .section p{
+    font-size: 1.2em;
+    text-align: center;
+  }
+.project-title{
+    margin-bottom: 1em;
+    flex-wrap: nowrap;
+    font-size: auto;
+  }
+
+  .mobile-full-width{
+    /* flex: unset;             Let items shrink */
+      min-width: 0;            /* Prevent overflow from long content */
+      width: 90%;
+     
+      flex-wrap: nowrap;
+      text-align: center;      /* Optional: center text if needed */
+      font-size: 0.6em;        /* Optional: shrink font slightly */
+    
+  }
+
+.crosshair{
+  width: 40vw;
 }
 
+  .section-row.tech {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    /* overflow-x: auto;          Enable horizontal scroll on small screens */
+    height: auto;              /* Let height grow slightly if needed */
+  }
+
+  .tech-tile {
+    font-size: 0.8em;          /* Slightly smaller text on small screens */
+    margin:-1em;
+  }
+
+  .decor.mid::after, .decor.right::after, .decor.left::after {
+    background: linear-gradient(to right, rgb(0, 0, 0) 10%, #454545 50%, rgb(0, 0, 0) 90%);
+  }
+
+  button .mobile{
+    visibility: visible;
+  }
+
+  .project-title a img.github-icon{
+    width: 20%;
+    height: auto;
+  }
+
 }
+
+
+
+

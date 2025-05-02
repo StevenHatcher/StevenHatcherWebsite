@@ -7,19 +7,33 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-      <body>
-        <nav>
-          <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
-          <a href="/index.html" class="nav-left">Steven Hatcher</a>
-          <div>
-              <a href="/index.html">Home</a>
-              <a href="/portfolio.html">Portfolio</a>
-              <a href="/resume.html">Resume</a>
-              <a href="/about.html">About Me</a>
-          </div>
-      </nav>
-       <!-- Back Button -->
-<!-- Back Button -->
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('show');
+        }
+      </script>
+    
+    
+    <body>
+    
+            <nav>
+              <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
+              <a href="/index.html" class="nav-left">Steven Hatcher</a>
+    
+              <!-- Hamburger Button -->
+                <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
+    
+    
+              <div class="nav-links" id="mobileMenu">
+                  <a href="/index.html">Home</a>
+                  <a href="/portfolio.html">Portfolio</a>
+                  <a href="/resume.html">Resume</a>
+                  <a href="/about.html">About Me</a>
+              </div>
+          </nav>
+
+
 <div class="side-nav">
   <div class="side-nav-back">
     <button class="back-button" onclick="window.history.back();">← Back</button>
@@ -45,13 +59,14 @@
         <a href="https://pyautogui.readthedocs.io/en/latest/" class="tech-tile"target="_blank" rel="noopener noreferrer">Pyautogui</a>
         <a href="https://pandas.pydata.org/" class="tech-tile"target="_blank" rel="noopener noreferrer">Pandas</a>
        </div>
-      <div class="project-title">
-        
-        <a href="https://github.com/StevenHatcher/SkillDetect" target="_blank" rel="noopener noreferrer"><img src="/images/github_logo.png" class="github-icon">
-        Enemy Stat Tracker
+      <div >
+        <div class = "section-row mobile-full-width">
+        <a href="https://github.com/StevenHatcher/SkillDetect" target="_blank" rel="noopener noreferrer" ><img src="/images/github_logo.png" class="github-icon">
+        <h1>Enemy Stat Tracker</h1>
         <!-- <img src="/images/portfolio/SkillDetect/profile_page.png" class="restrict-height" alt="Screenshot"> -->
       </a>
-      </div>
+    </div>
+
       <h4>Automatically view and track the statistics of enemies that defeat you in Fortnite the moment you are eliminated.</h4>
 
     </div>
@@ -84,7 +99,7 @@
             <p>The program waits until this icon is detected to begin.</p>
           </div>
           <div class="section-tile">
-            <img src="/images/portfolio/SkillDetect/caseSpecificCH.png" class="fourty-percent" style="border-radius:50%;"; alt="Screenshot">    
+            <img src="/images/portfolio/SkillDetect/caseSpecificCH.png" style="border-radius:50%;" class="crosshair" alt="Screenshot">    
           </div>
         </div>
 
@@ -94,7 +109,7 @@
             <h3>Locating</h3>
             <div class="section-tile">
               <div class="section-row">
-                <p class="section-tile textfill">The sizing and position of the enemy's username is dynamic based on its length. However, the crosshair icon's position is absolute in relation to the username.
+                <p class="section-tile text fill">The sizing and position of the enemy's username is dynamic based on its length. However, the crosshair icon's position is absolute in relation to the username.
                   Using this information and a sufficient sample size, I was able to calculate the linear regression model of the username's dimensions and position as a percentage of the screen-width.
                 </p>
               
@@ -114,16 +129,16 @@
               <p class="section-tile fill">For more consistent results when extracting text from the screen, the screenshot taken of the enemy's username is ran through two steps of preprocessing.</p>
               <div class="section-tile">
                 <div class="section-row">
-                  <p class="section-tile fill">1. Original image:</p>
+                  <p class="section-tile fill" style="font-weight:bold;">1. Original image:</p>
                   <img src="/images/portfolio/SkillDetect/unprocessed_username.png" class="section-tile full-width" alt="Screenshot">
                 </div>
                 <div class="section-row">
-                  <p class="section-tile fill">2. Grayscale:</p>
+                  <p class="section-tile fill" style="font-weight:bold;">2. Grayscale:</p>
                   <img src="/images/portfolio/SkillDetect/unprocessed_username.png" class="section-tile full-width grayscale" alt="Screenshot">
 
                 </div>
                 <div class="section-row">
-                  <p class="section-tile fill">3. Threshhold</p>
+                  <p class="section-tile fill" style="font-weight:bold;">3. Threshhold</p>
                   <img src="/images/portfolio/SkillDetect/processed_username.png" class="section-tile full-width" alt="Screenshot">
                 </div>
               </div>
@@ -200,8 +215,11 @@
 
       <!-- Section: Technologies -->
      
-      <div class="section" id="tech">
-         
+      <div class="section-row" id="overview">
+          <div class="section-tile"> </div>
+          <div class="section-tile main-buttons" onclick="scrollToSection('overview')"><button>Top</button></div>
+          <div class="section-tile"> </div>
+        </div>
           
       </div>
 

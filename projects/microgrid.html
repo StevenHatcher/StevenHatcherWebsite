@@ -5,18 +5,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
 	</head>
-	<body class="is-preload">
-
-			<!-- Nav -->
-            <nav id="nav">
-                <ul class="container">
-                    <li><a href="/index.html">Home</a></li>
-                    <!-- <li><a href="https://github.com/StevenHatcher" target="_blank" rel="noopener noreferrer">Github</a></li> -->
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                    <li><a href="/resume.html">Resume</a></li>
-                    <li><a href="/aboutme.html">About Me</a></li>
-                </ul>
-            </nav>
+	<script>
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('show');
+        }
+      </script>
+    
+    
+    <body>
+    
+            <nav>
+              <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
+              <a href="/index.html" class="nav-left">Steven Hatcher</a>
+    
+              <!-- Hamburger Button -->
+                <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
+    
+    
+              <div class="nav-links" id="mobileMenu">
+                  <a href="/index.html">Home</a>
+                  <a href="/portfolio.html">Portfolio</a>
+                  <a href="/resume.html">Resume</a>
+                  <a href="/about.html">About Me</a>
+              </div>
+          </nav>
 
 
 <!-- Portfolio -->
