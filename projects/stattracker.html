@@ -7,31 +7,25 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-      <script>
-        function toggleMenu() {
-          const menu = document.getElementById('mobileMenu');
-          menu.classList.toggle('show');
-        }
-      </script>
-    
-    
-    <body>
-    
-            <nav>
-              <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
-              <a href="/index.html" class="nav-left">Steven Hatcher</a>
-    
-              <!-- Hamburger Button -->
-                <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
-    
-    
-              <div class="nav-links" id="mobileMenu">
-                  <a href="/index.html">Home</a>
-                  <a href="/portfolio.html">Portfolio</a>
-                  <a href="/resume.html">Resume</a>
-                  <a href="/about.html">About Me</a>
-              </div>
-          </nav>
+<script src="js/navbar_height.js" defer></script>
+
+<body>
+
+        <nav>
+          <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
+          <a href="/index.html" class="nav-left" id="navbar">Steven Hatcher</a>
+
+          <!-- Hamburger Button -->
+            <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
+
+
+          <div class="nav-links" id="mobileMenu">
+              <a href="/index.html">Home</a>
+              <a href="/portfolio.html">Portfolio</a>
+              <a href="/resume.html">Resume</a>
+              <a href="/about.html">About Me</a>
+          </div>
+      </nav>
 
 
 <div class="side-nav">

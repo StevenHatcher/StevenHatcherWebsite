@@ -2,7 +2,10 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
-    color: #dedede
+    color: #dedede;
+    padding: 0;
+    box-sizing: border-box;
+    
   }
   nav {
     display: flex;
@@ -58,7 +61,7 @@ body {
     vertical-align: middle;
   }
   .landing, .portfolio, .project {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: auto;
     padding-top: 2em;
     /* padding: 2em; */
@@ -82,9 +85,9 @@ body {
   .profile-img {
     width: 250px;
     height: 250px;
-    border-radius: 10%;
+    /* border-radius: 10%;
     object-fit: cover;
-    background-color: #ccc;
+    background-color: #ccc; */
   }
 
   .tile-row, a.tile-row {
@@ -714,7 +717,7 @@ img.fourty-percent{
 h1{
   font-size: 6em;
   margin: 0;
-  
+  text-align: center;
 }
 
 .mobile-nav-menu{
@@ -736,6 +739,18 @@ button .mobile{
   visibility: hidden;
 }
 
+:root {
+  --navbar-height: 60px; /* desktop default */
+}
+
+
+
+
+
+
+
+
+
 
 /* MOBILE SETTINGS */
 @media (max-width: 768px) {
@@ -747,6 +762,15 @@ button .mobile{
     text-align: center;
     align-items: center;
     align-content: center;
+  }
+
+  .landing{
+    padding-top: 1em;
+  }
+
+  .tile.homepage{
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .container,
@@ -771,8 +795,13 @@ button .mobile{
 
   /* Resize profile image */
   .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 90vw;
+    height: auto;
+  }
+
+  .landing h1{
+    font-size: 6em;
+    color: #fbfbfb;
   }
 
   /* Fix image rows */
@@ -797,6 +826,9 @@ button .mobile{
     left: 0;
     padding: 1em;
     border-top: 1px solid #333;
+
+    padding: 0.3em 0.6em; /* Tighter link padding */
+    font-size: 0.95em;    /* Optional: slightly smaller font */
   }
 
   .nav-links.show {
@@ -812,6 +844,8 @@ button .mobile{
   nav {
     flex-wrap: wrap;
     align-items: center;
+    padding: 0 1em;   /* Reduce top/bottom padding for slimmer height */
+    height: auto;         /* Ensure it adjusts naturally */
   }
 
   .section-row.title{
@@ -828,6 +862,23 @@ button .mobile{
     margin-left: 0;
     padding: 0.5em 0;
   }
+
+  .fullscreen-adjust {
+    height: 110dvh; /* Uses the actual dynamic viewport height */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: var(--navbar-height, 60px); 
+    box-sizing: border-box;
+    padding: 0 1rem;
+    height: auto; /* Will be overwritten by JS */
+  }
+  :root {
+    --navbar-height: 10px; /* adjust for mobile layout */
+  }
+
 
   nav a.nav-left {
     margin-bottom: 0.5em;
@@ -890,6 +941,10 @@ button .mobile{
   width: 40vw;
 }
 
+.section-row.gap{
+  margin-bottom: 0;
+}
+
   .section-row.tech {
     flex-wrap: nowrap;
     flex-direction: row;
@@ -917,6 +972,8 @@ button .mobile{
 
 }
 
-
-
-
+@media (max-width: 1354px) {
+  img.profile-img{
+    margin:auto;
+  }
+}

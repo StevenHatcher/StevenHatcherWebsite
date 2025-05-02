@@ -7,19 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('show');
-    }
-  </script>
+
 
 
 <body>
 
         <nav>
           <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
-          <a href="/index.html" class="nav-left">Steven Hatcher</a>
+          <a href="/index.html" class="nav-left" id="navbar">Steven Hatcher</a>
 
           <!-- Hamburger Button -->
             <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
@@ -34,15 +29,18 @@
       </nav>
 
     <div class="landing">   
-                <div class="section-row gap">
-                    <img class="profile-img" src="images/me_headshot.jpg" alt="Profile Image">
-                    <div class="section-tile">
-                        <h1>Hi! I'm Steven Hatcher</h1>
-                        <p>Welcome to My Portfolio, I'm a dedicated <strong>Computer Scientist</strong> with experience and interest in both hardware and software applications. Here you'll find some of my projects, skills, and more!</p>
-                    </div>
-                    
-                    
-                </div>
+        <div class="section-row fullscreen-adjust gap">
+            <img class="profile-img" src="images/me_headshot.jpg" alt="Profile Image">
+            <div class="intro-title">
+              <h1>Hi, I'm Steven Hatcher!</h1>
+            </div>
+          </div>
+          
+          <div class="section-row">
+            <div class="section-tile">
+              <p>Welcome to My Portfolio, I'm a dedicated <strong>Computer Scientist</strong> with experience and interest in both hardware and software applications. Here you'll find some of my projects, skills, and more!</p>
+            </div>
+          </div>
 
                 <div class="section-row decor mid">
                     <div class="tile homepage">
@@ -116,6 +114,6 @@
                     
                 </div>
     </div>
-      
+    <script src="js/navbar_height.js" defer></script>
 </body>
 </html>
