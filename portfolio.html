@@ -1,91 +1,182 @@
-<html>
-	<head>
-		<title>Steven Hatcher</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-			<!-- Nav -->
-            <nav id="nav">
-                <ul class="container">
-                    <li><a href="/index.html">Home</a></li>
-                    <!-- <li><a href="https://github.com/StevenHatcher" target="_blank" rel="noopener noreferrer">Github</a></li> -->
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                    <li><a href="/resume.html">Resume</a></li>
-                    <li><a href="/aboutme.html">About Me</a></li>
-                </ul>
-            </nav>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SH Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+  <nav>
+    <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
+    <a href="/index.html" class="nav-left">Steven Hatcher</a>
+    <div>
+        <a href="/index.html">Home</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/resume.html">Resume</a>
+        <a href="/about.html">About Me</a>
+    </div>
+</nav>
 
-<!-- Portfolio -->
-        <article id="portfolio" class="wrapper style3">
-            <div class="container">
-                <header>
-                    <h2>Here’s some stuff I made recently.</h2>
-                    <!-- <p>Click on any title or picture to see behind the scenes</p> -->
-                </header>
-                <div class="row">
-              
-                    <div class="col-12 col-12-medium col-12-small">
-                        <article class="box style2">
-                            <a href="/projects/microgrid.html" class="image featured"><img src="images/portfolio/Microgrid/microgrid_dashboard.png" alt="" /></a>
-                            <h4><a href="/projects/microgrid.html">Sustainability Dashboard</a></h4>
-                            <p>.NET Framework C++ software to serve as a dashboard in monitoring an organization's power usage & generation, with functionality to design their own Microgrid.</p>
-                        </article>
-                    </div>
-                    <!-- <div class="col-6 col-6-medium col-12-small">
-                        <article class="box style2">
-                            <a href="#" class="image featured"><img src="images/portfolio/Microgrid/microgrid_data.png" alt="" /></a>
-                            <h4><a href="#">Data export</a></h4>
-                            <p>Organizations can export detailed Microsoft spreadsheets outlining the components on their grid, their properties, and relevant energy and financial information.</p>
-                        </article>
-                    </div>
-                    <div class="col-4 col-6-medium col-12-small">
-                        <article class="box style2">
-                            <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                            <h3><a href="#">Lorem ipsum</a></h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                    <div class="col-4 col-6-medium col-12-small">
-                        <article class="box style2">
-                            <a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-                            <h3><a href="#">Tempus dolore</a></h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                    <div class="col-4 col-6-medium col-12-small">
-                        <article class="box style2">
-                            <a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-                            <h3><a href="#">Feugiat aliquam</a></h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                    <div class="col-4 col-6-medium col-12-small">
-                        <article class="box style2">
-                            <a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-                            <h3><a href="#">Sed amet ornare</a></h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div> -->
+    
+
+    <div class="portfolio">
+
+        <div class="inline-pagination">
+            <button id="prevPage">Prev</button>
+            <button id="nextPage">Next</button>
+        
+        
+            <!-- <label for="languageFilter">Filter by language:</label>
+            <select id="languageFilter">
+            <option value="all">All</option>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+            <option value="Other">Other</option>
+            </select> -->
+        </div> 
+  
+
+            <div class="portfolio-page active">
+                <div class="section-row decor left">
+                  <a href="https://github.com/StevenHatcher/MiniGrid" target="_blank" rel="noopener noreferrer" class="tile" data-lang="C++">
+
+                            <img class="restrict-height" src="images/portfolio/Microgrid/microgrid_dashboard.png" alt="Full Width Project" />
+                            <div class="tile-content">
+                                <h3>Sustainability Software</h3>
+                                <div class="tile-language">C++ & .NET Framework</div>
+                                <p>Dashboard for an organization to design their own Microgrid with a focus on balancing the
+                                    metrics of cost, energy production, and percentage of renewable energy generated.</p>
+                            </div>
+                    </a>
+
+             
+                    
+                    <a href="/projects/stattracker.html" class="tile" data-lang="Python">
+                    <img class="restrict-height" src="images/portfolio/SkillDetect/username_screen.png" alt="Medium Project" /> 
+                    <div class="tile-content">
+                        <h3>Enemy Stat Tracker</h3>
+                        
+                        <div class="tile-language">Python</div>
+                        <p>Automatically view and track the statistics of enemies that defeat you in Fortnite the moment you are eliminated.</p>
+                        </div>
+                        </a>
+
                 </div>
-                <footer>
-                    <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-                    <a href="#contact" class="button large scrolly">Get in touch with me</a>
-                </footer>
+       
+                <div class="tile-row">
+
+                  <a href="https://github.com/StevenHatcher/StevenHatcherWebsite" target="_blank" rel="noopener noreferrer" class="tile tile-2" data-lang="Other">
+                        <img class="full-width" src="images/portfolio/website/portfolio_image.png" alt="Project 1" />
+                        <div class="tile-content">
+                            <h3>Portfolio website</h3>
+                            <div class="tile-language">HTML & CSS</div>
+                            <p>My personal website to showcase my projects and what I've been up to!</p>
+                        </div>
+                  </a>
+
+                  <a href="https://github.com/StevenHatcher/FortniteStats" target="_blank" rel="noopener noreferrer" class="tile tile-1" data-lang="Other">
+                        <img class="fourty-percent " src="images/portfolio/StatLibrary/json_example.png"
+                            alt="Small Project" />
+                        <div class="tile-content">
+                            <h3>Fortnite Stat Library</h3>
+                            <div class="tile-language">Python</div>
+                            <p>A free, open-source library to access and utilize a player's public Fortnite statistics
+                                in your project.</p>
+                        </div>
+                      </a>
+                </div>
             </div>
-        </article>
 
 
-		<!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-
+            <!-- Page 2 -->
+            <div class="portfolio-page">
+                <div class="tile-row">
+                    <div class="tile tile-full">
+                        <img class="eighty-percent restrict-height" src="images/samplePhotos/pic02.jpg" alt="Full Width Project" />
+                        <div class="tile-content">
+                            <h3>You're not supposed to see this yet!</h3>
+                            <div class="tile-language">:)</div>
+                            <p>Thank you for being curious about the things I create! More projects will be displayed
+                                here as I make them! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+
+
+<!-- Script to locally store the current page, handle next/prev button clicks, and displaying projects based on language -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const pages = document.querySelectorAll('.portfolio-page');
+      const prevBtn = document.getElementById('prevPage');
+      const nextBtn = document.getElementById('nextPage');
+      //const filterSelect = document.getElementById('languageFilter');
+      const paginationContainer = document.querySelector('.inline-pagination');
+      let currentPage = parseInt(localStorage.getItem('portfolioPage')) || 0;
+    
+      function updatePage(idx) {
+        pages.forEach((p, i) => {
+          p.classList.toggle('active', i === idx);
+          p.style.display = i === idx ? 'block' : 'none';
+        });
+        prevBtn.disabled = idx === 0;
+        nextBtn.disabled = idx === pages.length - 1;
+        prevBtn.classList.toggle('disabled', prevBtn.disabled);
+        nextBtn.classList.toggle('disabled', nextBtn.disabled);
+        localStorage.setItem('portfolioPage', idx);
+        applyFilter();
+      }
+    
+      prevBtn.addEventListener('click', () => {
+        if (currentPage > 0) updatePage(--currentPage);
+      });
+    
+      nextBtn.addEventListener('click', () => {
+        if (currentPage < pages.length - 1) updatePage(++currentPage);
+      });
+    /*
+      filterSelect.addEventListener('change', applyFilter);
+    
+      function applyFilter() {
+        const filter = filterSelect.value;
+        const isFiltering = filter !== 'all';
+        paginationContainer.style.display = isFiltering ? 'none' : 'flex';
+    
+        pages.forEach((page, index) => {
+          const tiles = page.querySelectorAll('.tile');
+    
+          tiles.forEach(tile => {
+            const lang = tile.getAttribute('data-lang');
+            const shouldShow = filter === 'all' || filter === lang;
+    
+            tile.style.display = shouldShow ? 'flex' : 'none';
+    
+            // If showing, ensure tile-1 and remove tile-2/tile-3/full-width
+            if (shouldShow) {
+              tile.classList.remove('tile-2', 'tile-3', 'full-width');
+              tile.classList.add('tile-1');
+            }
+          });
+    
+          // Only show the filtered page if it's active or filter is "all"
+          if (index === currentPage || !isFiltering) {
+            page.style.display = 'block';
+          } else {
+            page.style.display = 'none';
+          }
+        });
+      }
+      */
+      updatePage(currentPage);
+    });
+    </script>
+  
