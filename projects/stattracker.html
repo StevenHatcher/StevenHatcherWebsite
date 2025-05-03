@@ -180,8 +180,9 @@
     <h3>OCR Training</h3>
     <div class="section-row background title">
             <p class="section-tile text fill">While developing this software, I face a couple problems with extracting the username text from the screen using an OCR. The first problem was that the font used
-              in Fortnite is rather stylized, making it difficult for the OCR to read. Attempting to train the model using .tif line images with their respective ground-truths in a Linux subsystem proved to be futile.
-              Training models were seeing some success, but ultimately ended up skewed, presumably due to overfitting.
+              in Fortnite is rather stylized, making it difficult for the OCR to read. Attempting to train the model using .tif line images with their respective ground-truth texts in a Linux subsystem proved to be futile.
+              Training models were seeing some success, but ultimately ended up skewed. There were a few specific character pairs that the OCR had trouble distinguishing (e.g. I and 1, G and 6), so I focused on training the model on
+              the characters that it struggled with the most. However, this led to overfitting withinin the model, developing a tendency to read those characters (this effect was notable regardless of the number of training iterations (100, 1K, 10K)).
               <br><br>I attempted to use Paddle OCR, however, it ended up being even less consistent. Processing the photo before passing it through Tesseract OCR (untrained) yielded surprising accurate
               and consistent results
             </p>
