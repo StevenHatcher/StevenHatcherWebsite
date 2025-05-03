@@ -6,7 +6,7 @@ function adjustFullscreenHeight() {
   if (isMobile) {
     const navbarHeight = navbar.offsetHeight;
     const viewportHeight = window.innerHeight;
-    section.style.height = (viewportHeight - navbarHeight) + 'px';
+    // section.style.height = (viewportHeight - navbarHeight) + 'px';
   } else {
     section.style.height = 'auto'; // Reset on desktop
   }

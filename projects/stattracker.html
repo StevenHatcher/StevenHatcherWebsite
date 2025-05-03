@@ -7,26 +7,25 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<script src="js/navbar_height.js" defer></script>
+
 
 <body>
 
-        <nav>
-          <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
-          <a href="/index.html" class="nav-left" id="navbar">Steven Hatcher</a>
+  <nav id="navbar">
+    <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
+    <a href="/index.html" class="nav-left" >Steven Hatcher</a>
 
-          <!-- Hamburger Button -->
-            <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
+    <!-- Hamburger Button -->
+      <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
 
 
-          <div class="nav-links" id="mobileMenu">
-              <a href="/index.html">Home</a>
-              <a href="/portfolio.html">Portfolio</a>
-              <a href="/resume.html">Resume</a>
-              <a href="/about.html">About Me</a>
-          </div>
-      </nav>
-
+    <div class="nav-links" id="mobileMenu">
+        <a href="/index.html">Home</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/resume.html">Resume</a>
+        <a href="/about.html">About Me</a>
+    </div>
+</nav>
 
 <div class="side-nav">
   <div class="side-nav-back">
@@ -228,9 +227,9 @@
 </div>
 
 
-
+    <script src="/js/navbar_height.js" defer></script>
   </body>
-</html>
+
 
 <script>
   function scrollToSection(id) {
@@ -244,3 +243,4 @@
     }
   }
 </script>
+</html>

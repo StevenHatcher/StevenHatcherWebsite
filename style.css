@@ -754,18 +754,19 @@ button .mobile{
 
 /* MOBILE SETTINGS */
 @media (max-width: 768px) {
-  body{
-    width: 100vw;
-  }
-  /* Stack flex containers vertically */
-  .landing-title-section.project-title{
+  body, html{
+    /* width: 100vw; */
     text-align: center;
     align-items: center;
     align-content: center;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
+  
 
   .landing{
-    padding-top: 1em;
+    margin-top: -1em;
   }
 
   .tile.homepage{
@@ -775,13 +776,17 @@ button .mobile{
 
   .container,
   .tile-row,
-  .section-row,
+ 
   .portfolio-header,
   .portfolio-filter {
     flex-direction: column;
     align-items: center;
   }
 
+  .section-tile img{
+    border-radius: 1em;
+  
+  }
   /* Ensure tiles and images don't overflow screen */
   .tile,
   .section-tile,
@@ -800,10 +805,13 @@ button .mobile{
   }
 
   .landing h1{
-    font-size: 6em;
+    font-size: 5em;
     color: #fbfbfb;
   }
 
+  .decor.mobile ::after{
+    background: linear-gradient(to right, rgb(0, 0, 0) 10%, #454545 50%, rgb(0, 0, 0) 90%);
+  }
   /* Fix image rows */
   .section-row.imagerow img,
   .section-row.imagerow-big img {
@@ -890,8 +898,15 @@ button .mobile{
   }
 
   .section, .section-tile{
-    text-align: center;
+    
+    /* text-align: center; */
     align-items: center;
+    padding-left: 0;
+  }
+
+  .tile{
+    /* margin-left: 0; */
+    /* padding-left: 0; */
   }
 
   .landing h4{
@@ -957,11 +972,13 @@ button .mobile{
     margin:-1em;
   }
 
-  .decor.mid::after, .decor.right::after, .decor.left::after {
+  .decor.right::after, .decor.left::after {
     background: linear-gradient(to right, rgb(0, 0, 0) 10%, #454545 50%, rgb(0, 0, 0) 90%);
   }
-
-  button .mobile{
+.decor.mid::after{
+  background: none;
+}
+  button.mobile{
     visibility: visible;
   }
 
@@ -972,8 +989,24 @@ button .mobile{
 
 }
 
-@media (max-width: 1354px) {
+
+
+
+
+
+@media (max-width: 1355px) {
   img.profile-img{
     margin:auto;
+  }
+  .landing h1{
+    margin-bottom: 2em;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px){
+  .landing h1{
+    font-size: 3em;
   }
 }

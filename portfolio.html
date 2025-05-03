@@ -8,25 +8,25 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<script src="js/navbar_height.js"></script>
+
 
 <body>
 
-        <nav>
-          <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
-          <a href="/index.html" class="nav-left" id="navbar">Steven Hatcher</a>
+  <nav id="navbar">
+    <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
+    <a href="/index.html" class="nav-left" >Steven Hatcher</a>
 
-          <!-- Hamburger Button -->
-            <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
+    <!-- Hamburger Button -->
+      <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
 
 
-          <div class="nav-links" id="mobileMenu">
-              <a href="/index.html">Home</a>
-              <a href="/portfolio.html">Portfolio</a>
-              <a href="/resume.html">Resume</a>
-              <a href="/about.html">About Me</a>
-          </div>
-      </nav>
+    <div class="nav-links" id="mobileMenu">
+        <a href="/index.html">Home</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/resume.html">Resume</a>
+        <a href="/about.html">About Me</a>
+    </div>
+</nav>
 
     
 
@@ -48,8 +48,8 @@
   
 
             <div class="portfolio-page active">
-                <div class="section-row decor left">
-                  <a href="https://github.com/StevenHatcher/MiniGrid" target="_blank" rel="noopener noreferrer" class="tile" data-lang="C++">
+                <div class="section-row decor mid mobile">
+                  <a href="https://github.com/StevenHatcher/MiniGrid" target="_blank" rel="noopener noreferrer" class="tile decor mobile" data-lang="C++">
 
                             <img class="restrict-height" src="images/portfolio/Microgrid/microgrid_dashboard.png" alt="Full Width Project" />
                             <div class="tile-content">
@@ -62,7 +62,7 @@
 
              
                     
-                    <a href="/projects/stattracker.html" class="tile" data-lang="Python">
+                    <a href="/projects/stattracker.html" class="tile decor mobile" data-lang="Python">
                     <img class="restrict-height" src="images/portfolio/SkillDetect/username_screen.png" alt="Medium Project" /> 
                     <div class="tile-content">
                         <h3>Enemy Stat Tracker</h3>
@@ -74,9 +74,9 @@
 
                 </div>
        
-                <div class="tile-row">
+                <div class="section-row">
 
-                  <a href="https://github.com/StevenHatcher/StevenHatcherWebsite" target="_blank" rel="noopener noreferrer" class="tile tile-2" data-lang="Other">
+                  <a href="https://github.com/StevenHatcher/StevenHatcherWebsite" target="_blank" rel="noopener noreferrer" class="tile tile-2 decor mobile" data-lang="Other">
                         <img class="full-width" src="images/portfolio/website/portfolio_image.png" alt="Project 1" />
                         <div class="tile-content">
                             <h3>Portfolio website</h3>
@@ -84,8 +84,8 @@
                             <p>My personal website to showcase my projects and what I've been up to!</p>
                         </div>
                   </a>
-
-                  <a href="https://github.com/StevenHatcher/FortniteStats" target="_blank" rel="noopener noreferrer" class="tile tile-1" data-lang="Other">
+                    
+                  <a href="https://github.com/StevenHatcher/FortniteStats" target="_blank" rel="noopener noreferrer" class="tile tile-1 decor mobile" data-lang="Other">
                         <img class="fourty-percent " src="images/portfolio/StatLibrary/json_example.png"
                             alt="Small Project" />
                         <div class="tile-content">
@@ -101,8 +101,8 @@
 
             <!-- Page 2 -->
             <div class="portfolio-page">
-                <div class="tile-row">
-                    <div class="tile tile-full">
+                <div class="section-row">
+                    <div class="tile tile-full decor mobile">
                         <img class="eighty-percent restrict-height" src="images/samplePhotos/pic02.jpg" alt="Full Width Project" />
                         <div class="tile-content">
                             <h3>You're not supposed to see this yet!</h3>
@@ -116,75 +116,14 @@
             </div>
         </div>
     </div>
+    <script src="js/navbar_height.js" defer></script>
+    <script src="js/portfolio_traversal.js"></script>
 </body>
 
 </html>
 
 
-<!-- Script to locally store the current page, handle next/prev button clicks, and displaying projects based on language -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const pages = document.querySelectorAll('.portfolio-page');
-      const prevBtn = document.getElementById('prevPage');
-      const nextBtn = document.getElementById('nextPage');
-      //const filterSelect = document.getElementById('languageFilter');
-      const paginationContainer = document.querySelector('.inline-pagination');
-      let currentPage = parseInt(localStorage.getItem('portfolioPage')) || 0;
-    
-      function updatePage(idx) {
-        pages.forEach((p, i) => {
-          p.classList.toggle('active', i === idx);
-          p.style.display = i === idx ? 'block' : 'none';
-        });
-        prevBtn.disabled = idx === 0;
-        nextBtn.disabled = idx === pages.length - 1;
-        prevBtn.classList.toggle('disabled', prevBtn.disabled);
-        nextBtn.classList.toggle('disabled', nextBtn.disabled);
-        localStorage.setItem('portfolioPage', idx);
-        applyFilter();
-      }
-    
-      prevBtn.addEventListener('click', () => {
-        if (currentPage > 0) updatePage(--currentPage);
-      });
-    
-      nextBtn.addEventListener('click', () => {
-        if (currentPage < pages.length - 1) updatePage(++currentPage);
-      });
-    /*
-      filterSelect.addEventListener('change', applyFilter);
-    
-      function applyFilter() {
-        const filter = filterSelect.value;
-        const isFiltering = filter !== 'all';
-        paginationContainer.style.display = isFiltering ? 'none' : 'flex';
-    
-        pages.forEach((page, index) => {
-          const tiles = page.querySelectorAll('.tile');
-    
-          tiles.forEach(tile => {
-            const lang = tile.getAttribute('data-lang');
-            const shouldShow = filter === 'all' || filter === lang;
-    
-            tile.style.display = shouldShow ? 'flex' : 'none';
-    
-            // If showing, ensure tile-1 and remove tile-2/tile-3/full-width
-            if (shouldShow) {
-              tile.classList.remove('tile-2', 'tile-3', 'full-width');
-              tile.classList.add('tile-1');
-            }
-          });
-    
-          // Only show the filtered page if it's active or filter is "all"
-          if (index === currentPage || !isFiltering) {
-            page.style.display = 'block';
-          } else {
-            page.style.display = 'none';
-          }
-        });
-      }
-      */
-      updatePage(currentPage);
-    });
-    </script>
+
+
+
   
