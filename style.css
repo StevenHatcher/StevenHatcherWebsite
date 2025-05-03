@@ -248,7 +248,9 @@ body {
   .tile-3 { flex: 3; }
   .full-width .tile { width: 100%; }
 
-
+.section-tile.center img{
+  align-self: center;
+}
 
 img.fourty-percent{
     max-width: 40%;
@@ -270,8 +272,9 @@ img.fourty-percent{
   }
 
   img.restrict-height, .section-tile.restrict-height{
-    max-height: 250px;
-    width: auto;
+    height: 50%;
+    width: 60%;
+    margin: 0 auto;  /* Center the image */
   }
 
   
@@ -766,7 +769,13 @@ button .mobile{
   
 
   .landing{
-    margin-top: -1em;
+    margin-top: -2em;
+  }
+
+  .landing h1{
+    font-size: 5em;
+    color: #fbfbfb;
+    
   }
 
   .tile.homepage{
@@ -804,10 +813,7 @@ button .mobile{
     height: auto;
   }
 
-  .landing h1{
-    font-size: 5em;
-    color: #fbfbfb;
-  }
+
 
   .decor.mobile ::after{
     background: linear-gradient(to right, rgb(0, 0, 0) 10%, #454545 50%, rgb(0, 0, 0) 90%);
@@ -843,6 +849,8 @@ button .mobile{
     display: flex;
   }
 
+  
+
   .mobile-nav-menu{
     display: block;
     margin-left: auto;
@@ -871,6 +879,10 @@ button .mobile{
     padding: 0.5em 0;
   }
 
+  h2.firm{
+    font-size:2em;
+  }
+
   .fullscreen-adjust {
     height: 110dvh; /* Uses the actual dynamic viewport height */
     display: flex;
@@ -892,7 +904,7 @@ button .mobile{
     margin-bottom: 0.5em;
   }
 
-  img.fourty-percent, img.sixty-percent, img.eighty-percent, .section-tile.fourty-percent, .section-tile.sixty-percent, .section-tile.eighty-percent {
+  img.eighty-percent, .section-tile.fourty-percent, .section-tile.sixty-percent, .section-tile.eighty-percent {
     width: 100%;
     max-width: 100%;
   }
@@ -902,11 +914,6 @@ button .mobile{
     /* text-align: center; */
     align-items: center;
     padding-left: 0;
-  }
-
-  .tile{
-    /* margin-left: 0; */
-    /* padding-left: 0; */
   }
 
   .landing h4{
@@ -987,6 +994,13 @@ button .mobile{
     height: auto;
   }
 
+  .section-tile.larger{
+    flex:2;
+  }
+  .section-tile.smaller{
+    flex:1;
+  }
+
 }
 
 
@@ -999,13 +1013,13 @@ button .mobile{
     margin:auto;
   }
   .landing h1{
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     justify-content: center;
     text-align: center;
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 389px){
   .landing h1{
     font-size: 3em;
   }
