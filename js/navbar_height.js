@@ -20,3 +20,6 @@ window.addEventListener('resize', adjustFullscreenHeight);
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('show');
   }
+
+
+  

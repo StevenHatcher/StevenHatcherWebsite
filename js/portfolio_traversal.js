@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //const filterSelect = document.getElementById('languageFilter');
     const paginationContainer = document.querySelector('.inline-pagination');
     let currentPage = parseInt(localStorage.getItem('portfolioPage')) || 0;
-  
+    const isMobile = window.innerWidth <= 768;
+
+   
+     
     function updatePage(idx) {
       pages.forEach((p, i) => {
         p.classList.toggle('active', i === idx);
@@ -21,10 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
     prevBtn.addEventListener('click', () => {
       if (currentPage > 0) updatePage(--currentPage);
+      
+      
     });
   
     nextBtn.addEventListener('click', () => {
       if (currentPage < pages.length - 1) updatePage(++currentPage);
+      // if (isMobile) {
+      //   window.scrollTo({ top: 0, behavior: 'smooth' });
+      // }
     });
   /*
     filterSelect.addEventListener('change', applyFilter);
@@ -61,3 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     updatePage(currentPage);
   });
+
+  function scrollToSection(id) {
+    if (id === "overview") {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }

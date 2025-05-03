@@ -83,8 +83,8 @@ body {
     
   }
   .profile-img {
-    width: 250px;
-    height: 250px;
+    width: 10%;
+    height: auto;
     /* border-radius: 10%;
     object-fit: cover;
     background-color: #ccc; */
@@ -400,7 +400,7 @@ img.fourty-percent{
   
   }
 .section-row.gap{
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
   
 
@@ -521,7 +521,11 @@ img.fourty-percent{
     transition: background-color 0.3s ease;
   }
   
-  
+  .blurb-text{
+    
+  }
+
+
   .back-button:hover {
     background-color: #666;
   }
@@ -776,6 +780,7 @@ button .mobile{
     font-size: 5em;
     color: #fbfbfb;
     
+    
   }
 
   .tile.homepage{
@@ -849,7 +854,9 @@ button .mobile{
     display: flex;
   }
 
-  
+  .section.aboutme h3{
+    padding-left: 0em;
+  }
 
   .mobile-nav-menu{
     display: block;
@@ -910,11 +917,19 @@ button .mobile{
   }
 
   .section, .section-tile{
-    
+   
     /* text-align: center; */
     align-items: center;
     padding-left: 0;
   }
+
+  /* .section-tile :not(.profile-img){
+    background-color: #161616;
+    border-radius: 0.4em;
+    padding: 0.4em
+  } */
+
+  
 
   .landing h4{
 
@@ -938,14 +953,19 @@ button .mobile{
   }
   
 
-  .section p{
+  .section p, .landing p{
     font-size: 1.05em;
     text-align: center;
   }
 .project-title{
+  font-size:smaller;
     margin-bottom: 1em;
     flex-wrap: nowrap;
     font-size: auto;
+  }
+
+  .project-title.aboutme{
+    margin-bottom: 0em;
   }
 
   .mobile-full-width{
@@ -1004,10 +1024,6 @@ button .mobile{
 }
 
 
-
-
-
-
 @media (max-width: 1355px) {
   img.profile-img{
     margin:auto;
@@ -1017,10 +1033,16 @@ button .mobile{
     justify-content: center;
     text-align: center;
   }
+ 
 }
 
 @media (max-width: 389px){
   .landing h1{
-    font-size: 3em;
+    font-size: 2.5em;
+    padding-top: -2em;
+  }
+  .section p, .landing p{
+    
+    text-align: center;
   }
 }
