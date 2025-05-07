@@ -272,8 +272,8 @@ img.fourty-percent{
   }
 
   img.restrict-height, .section-tile.restrict-height{
-    height: 50%;
-    width: 60%;
+    height: 60%;
+    width: 50%;
     margin: 0 auto;  /* Center the image */
   }
 
@@ -684,6 +684,12 @@ img.fourty-percent{
   width: 100%;
   background: linear-gradient(to left, #2d2d2d, transparent);
   margin-top: -0.35em;
+}
+
+.crosshair{
+  width: 30%;
+  height: auto;
+  justify-self: right;
 }
 
 /* Project page subsection titles */
