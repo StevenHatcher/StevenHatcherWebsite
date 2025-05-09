@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
     <nav id="navbar">
@@ -26,10 +25,12 @@
             <a href="/about.html">About Me</a>
         </div>
     </nav>
-
+    
     <div class="landing"> 
-              <form action="https://formsubmit.co/el/sopipi" method="POST" class="contact-form">
-                <input type="hidden" name="_subject" value="Steven Hatcher - "> <!-- Set the default subject of the email -->
+              <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="3f5d14ef-aee2-4edb-b9a6-375f6e64c4a8">
+                <!-- Custom Confirmation / Success Page -->
+                <input type="hidden" name="redirect" value="https://www.stevenhatcher.com/index.html">
                 <h2>Get in touch</h2>
                 <div class="section-row">
                     
@@ -52,9 +53,9 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
+                  
                 <button type="submit">Send Message</button>
               </form>
-      
     </div>   
     <script src="js/navbar_height.js"></script>
 </body>
