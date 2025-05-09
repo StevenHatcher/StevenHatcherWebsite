@@ -521,9 +521,9 @@ img.fourty-percent{
     transition: background-color 0.3s ease;
   }
   
-  .blurb-text{
+  /* .blurb-text{
     
-  }
+  } */
 
 
   .back-button:hover {
@@ -758,12 +758,57 @@ button .mobile{
 
 
 
+label{
+  font-size: 2.3em;
+}
 
 
 
+.mobile-wrap{
+  flex-wrap: nowrap;
+}
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.contact-form .section-row{
+  margin-bottom: 0;
+  justify-content: flex-end;
+}
 
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 70%;
+  box-sizing: border-box;
+  margin-left: auto;
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-form h2{
+  font-size: 2.8em;
+  margin-bottom: 0;
+  margin-top: 0.6em;
+}
 
 /* MOBILE SETTINGS */
 @media (max-width: 768px) {
@@ -783,7 +828,7 @@ button .mobile{
   }
 
   .landing h1{
-    font-size: 5em;
+    font-size: 4em;
     color: #fbfbfb;
     
     
@@ -869,6 +914,33 @@ button .mobile{
     margin-left: auto;
   }
 
+  .contact-form .section-row{
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: flex-start;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 70%;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: -1em;
+  }
+
+  .contact-form textarea{
+    margin-bottom: 1em;
+  }
+
+  .contact-form h2{
+    margin-top: 0.2em;
+  }
+
   /* Optional: stack nav links vertically if needed */
   nav {
     flex-wrap: wrap;
@@ -912,6 +984,9 @@ button .mobile{
     --navbar-height: 10px; /* adjust for mobile layout */
   }
 
+  .mobile-wrap{
+    flex-wrap: wrap;
+  }
 
   nav a.nav-left {
     margin-bottom: 0.5em;

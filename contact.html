@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <nav id="navbar">
+        <!-- <img src="images/signature.png" alt="Logo" class="icon" /> -->
+        <a href="/index.html" class="nav-left" >Steven Hatcher</a>
+
+        <!-- Hamburger Button -->
+          <button class="mobile-nav-menu" onclick="toggleMenu()">☰</button>
+
+        <div class="nav-links" id="mobileMenu">
+            <a href="/index.html">Home</a>
+            <a href="/portfolio.html">Portfolio</a>
+            <!-- <a href="/resume.html">Resume</a> -->
+            <a href="/contact.html">Contact</a>
+            <a href="/about.html">About Me</a>
+        </div>
+    </nav>
+
+    <div class="landing"> 
+              <form action="https://formsubmit.co/el/sopipi" method="POST" class="contact-form">
+                <input type="hidden" name="_subject" value="Steven Hatcher - "> <!-- Set the default subject of the email -->
+                <h2>Get in touch</h2>
+                <div class="section-row">
+                    
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+            
+                </div>
+                <div class="section-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="section-row">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="_subject" required>
+                    <!-- placeholder="e.g., Question about your services" -->
+                </div>
+
+                <div class="section-row">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+              </form>
+      
+    </div>   
+    <script src="js/navbar_height.js"></script>
+</body>
+</html>
+
+
