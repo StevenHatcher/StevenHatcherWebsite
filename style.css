@@ -64,11 +64,7 @@ body {
     max-width: 1600px;
     margin: auto;
     padding-top: 2em;
-    /* padding: 2em; */
-    /* background-color: #efefef; */
     border-radius: 10px;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
-    /* overflow: hidden; */
   }
   
   .section.aboutme h3{
@@ -83,11 +79,9 @@ body {
     
   }
   .profile-img {
-    width: 10%;
-    height: auto;
-    /* border-radius: 10%;
-    object-fit: cover;
-    background-color: #ccc; */
+    width: 100%;
+    height: 100%;
+    margin:auto;
   }
 
   .tile-row, a.tile-row {
@@ -728,10 +722,11 @@ img.fourty-percent{
 }
 
 h1{
-  font-size: 6em;
+  font-size: 6rem;
   margin: 0;
   text-align: center;
 }
+
 
 .mobile-nav-menu{
   display: none;
@@ -1120,9 +1115,9 @@ label{
     margin:auto;
   }
   .landing h1{
-    margin-bottom: 3em;
+    font-size: 3rem;
     justify-content: center;
-    text-align: center;
+    /* text-align: center; */
   }
  
 }
