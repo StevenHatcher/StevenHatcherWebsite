@@ -61,7 +61,7 @@ body {
     vertical-align: middle;
   }
   .landing, .portfolio, .project {
-    max-width: 1600px;
+    max-width: 63vw;
     margin: auto;
     padding-top: 2em;
     border-radius: 10px;
@@ -722,9 +722,11 @@ img.fourty-percent{
 }
 
 h1{
-  font-size: 6rem;
+  font-size: 3.7vw;
+  /* width: 100%; */
   margin: 0;
   text-align: center;
+
 }
 
 
@@ -899,6 +901,10 @@ label{
     font-size: 0.95em;    /* Optional: slightly smaller font */
   }
 
+  .tile-content{
+    text-align: center;
+  }
+
   .nav-links.show {
     display: flex;
   }
@@ -974,7 +980,7 @@ label{
   }
 
   .fullscreen-adjust {
-    height: 110dvh; /* Uses the actual dynamic viewport height */
+    height: 110dvh; 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1015,7 +1021,9 @@ label{
     padding: 0.4em
   } */
 
-  
+  .landing, .portfolio, .project{
+    max-width: 95vw;
+  }
 
   .landing h4{
 
@@ -1063,6 +1071,12 @@ label{
       text-align: center;      /* Optional: center text if needed */
       font-size: 0.6em;        /* Optional: shrink font slightly */
     
+  }
+
+ .landing h1{
+    font-size: 4em !important;
+    justify-content: center;
+    /* text-align: center; */
   }
 
 .crosshair{
@@ -1115,7 +1129,7 @@ label{
     margin:auto;
   }
   .landing h1{
-    font-size: 3rem;
+    font-size: 3vw;
     justify-content: center;
     /* text-align: center; */
   }
