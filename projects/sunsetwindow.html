@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StatTracker</title>
+    <title>Sunset Window</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -37,7 +37,7 @@
     <div class="section-link" onclick="scrollToSection('overview')">Overview</div>
     <!-- <div class="section-link" onclick="scrollToSection('demo')">Demo</div> -->
     <div class="section-link" onclick="scrollToSection('functionality')">Functionality</div>
-    <div class="section-link" onclick="scrollToSection('information')">Information</div>
+    <!-- <div class="section-link" onclick="scrollToSection('information')">Information</div> -->
   </div>
 </div>
 
@@ -56,14 +56,14 @@
        </div>
       <div >
         <div class = "section-row mobile-full-width">
-        <a href="https://github.com/StevenHatcher/SkillDetect" target="_blank" rel="noopener noreferrer" ><img src="/images/github_logo.png" class="github-icon">
-        <h1>Realtime Daylight Simulating Window</h1>
+        <a href="https://github.com/StevenHatcher/SunsetWindow" target="_blank" rel="noopener noreferrer" ><img src="/images/github_logo.png" class="github-icon">
+        <h1>Realtime Daylight Window</h1>
         <!-- <img src="/images/portfolio/SkillDetect/profile_page.png" class="restrict-height" alt="Screenshot"> -->
       </a>
     </div>
 
-      <h4>Stimulate your circadian rhythm anywhere as this false window synchronises to your location's current daylight pattern.</h4>
-
+      <h4>Stimulate your circadian rhythm anywhere as this false window synchronises to and simulates your location's current daylight cycle.</h4>
+          <img src="/images/portfolio/SunsetWindow/windowTimeline.jpg" class="section-tile image full-width" alt="Screenshot" style="margin-left: auto; margin-right: auto;">
       </div>
     </div>  
    
@@ -85,7 +85,7 @@
       <!-- Section: Image and Description -->
       <div class="section" id="functionality">
         <h2>Functionality</h2>
-        <h3>Accurate current time</h3>
+        <h3>Accurate current time using Network Time Protocol</h3>
         <div class="section-row background title">
           
           <div class="section-tile text">
@@ -101,27 +101,21 @@
 
           <div class="section-row background title">
             <h3>Locating</h3>
-          
-              
-                <p class="section-row text fill">A custom prompt is used to access the accurate sunlight cycle data for the current day from [API] in unix format.
+        
+                <p class="section-row text fill">Accurate sunlight-cycle data for the current day is retrieved from SunriseSunset API in unix format.
                   These retrieved times are used to define important time-markers through the day that begin various processes.<br><br>
               
                   The current time from the NTP is leveraged against these dynamic "checkpoints" - the "percentage" of which the current time has progressed
                   through the currently active time "section" (e.g. [sunrise -> noon]) is a component of the calculation for the current brightness and color of the light.
                 </p>
 
-                
-   
-
-              
-          
           </div>
 
           <div class="section-row background title">
             <h3>Resource Optimization</h3>
 
             <p class="section-row text fill"> The microcontroller and lightstrip are powered independently using separate power supplies. An inline switch
-              rests between the power line for the lightstrip and the power supply itself. This allows you to turn the lights off without affecting
+              rests between the positive line for the lightstrip and the power supply itself. This allows you to turn the lights off without affecting
               the program running. Otherwise, the microcontroller would need to connect to the network and make various requests any time you want to turn the lights off.<br><br>
             
               The current time is accessed only once to avoid redundancy. The sunlight cycle data for the current day is accessed on boot, then the data
@@ -136,6 +130,7 @@
         <h3>Wiring Diagram</h3>
       
           <div class="section-row">
+            <img src="/images/portfolio/SunsetWindow/SunsetWindowDiagram.png" class="section-tile image full-width" alt="Screenshot" style="margin-left: auto; margin-right: auto;">
             <div class="section-tile text">
               <p>
                 Parts:<br>
@@ -150,7 +145,7 @@
               </p>
             </div>
             <!-- Image of the wiring diagram here -->
-              <img src="/images/portfolio/SkillDetect/profile_page.png" class="section-tile image full-width" alt="Screenshot">
+              
       
          </div>
 
