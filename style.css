@@ -161,8 +161,8 @@ body {
   }
   
   .section-row.title h3{
-    max-width: 4em;
-    flex-wrap: wrap;
+    /* max-width: 8em; */
+    flex-wrap: nowrap;
   }
   .section-row.title{
     margin-left: 1.5em;
