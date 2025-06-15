@@ -154,7 +154,7 @@ body {
   }
   /* Styling for paragraph text inside the tile */
   .tile.homepage p {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #cecece;
     text-align: center;
     margin-bottom: 1em; 
@@ -167,6 +167,10 @@ body {
   .section-row.title{
     margin-left: 1.5em;
   }
+   .section-row p{
+    font-size: 1.4em;
+  }
+  
 
   h2.firm{
     font-size: 3em;
@@ -720,6 +724,11 @@ img.fourty-percent{
 .section p.fill{
   line-height: 1.8em;
 }
+.section p.experience{
+  margin-bottom: -2em;
+  font-size: 1.2em;
+}
+
 
 h1{
   font-size: 3.7vw;

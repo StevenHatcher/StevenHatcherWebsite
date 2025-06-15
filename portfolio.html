@@ -30,10 +30,26 @@
         </div>
     </nav>
 
+    <div class="side-nav">
+        <div class="side-nav-links">
+        <div class="section-link" onclick="scrollToSection('projects')">Projects</div>
+          <div class="section-link" onclick="scrollToSection('experience')">Experience</div>
+          <!-- <div class="section-link" onclick="scrollToSection('demo')">Demo</div> -->
+          
+          
+        </div>
+      </div>
     
+      
+    <div class="landing">
 
-    <div class="portfolio">
 
+    
+ 
+    <!-- Project Section -->
+     
+    <div class="section" id="projects">
+        <h2>Projects</h2>
         <div class="inline-pagination">
             <button id="prevPage">Prev</button>
             <button id="nextPage" style="margin-right: 1em;">Next</button>
@@ -57,7 +73,7 @@
                             <div class="tile-content">
                                 <h3>Microgrid Dashboard</h3>
                                 <div class="tile-language">C++ & .NET Framework</div>
-                                <p>Dashboard for an organization to design their own Microgrid with a focus on balancing the
+                                <p>Dashboard to design personal or industrial Microgrid with a focus on balancing the
                                     metrics of cost, energy production, and percentage of renewable energy generated.</p>
                             </div>
                     </a>
@@ -74,6 +90,17 @@
                         </div>
                         </a>
 
+                </div>
+
+                <div class="section-row">
+                    <a href="/projects/SunsetWindow.html" class="section-tile tile-3 center" data-lang="C++">
+                        <img src="images/portfolio/SunsetWindow/windowTimeline.jpg" alt="Large Project" /> 
+                        <div class="tile-content">
+                            <h3>Realtime Daylight Window</h3>
+                            <div class="tile-language">C++ & ESP32</div>
+                            <p>ESP32 Microcontroller driven project that synchronises to and simulates your location's current daylight cycle.</p>
+                        </div>
+                    </a>
                 </div>
        
                 <div class="section-row">
@@ -98,6 +125,8 @@
                         </div>
                   </a>
                 </div>
+
+                
             </div>
 
 
@@ -116,6 +145,50 @@
                 </div>
             </div>
             </div>
+
+
+<!-- Experience Section -->
+<div class="section" id="experience">
+                   <h2>Experience</h2>
+                  
+            <div class="section-row background title">
+                
+            
+            <div class="section-tile">
+            
+            <h3>Coding Instructor<br></h3>
+              <div class="section-row">
+                <p class="section-tile text fill experience">•Delivered coding instruction to children aged 5-15 in multiple programming languages—including block-based tools,
+                    JavaScript, C#, and Lua.<br>
+                    • Taught structured lessons to classes of students of varying ages and skill levels, ensuring lesson content was accessible to
+                    each student while progressing the knowledge and experience of the class as a whole.<br>
+                    • Designed interactive curricula and guided students through applying new concepts by building games in various
+                    platforms and frameworks, including Unity, Roblox Studio, Microsoft MakeCode Arcade, etc.<br>
+                </p>
+              </div>
+              <h3>Center Director<br></h3>
+              <div class="section-row">
+                <p class="section-tile text fill experience">• Managed the technical and managerial operations of the Code Ninjas center, ensuring smooth and efficient functioning.<br>
+                    • Increased customer retention by building positive relationships with customers, addressing inquiries and concerns
+                    promptly and professionally.<br>
+                    • Contributed innovative ideas to enhance students’ educational and entertainment experience.<br>
+                    • Exceeded monthly membership sales goals by effectively promoting our programs to potential customers through phone
+                    and email communication.<br>
+                </p>
+              </div>
+              <h3>Software Development<br></h3>
+              <div class="section-row">
+                <p class="section-tile text fill experience">• 8 Years of experience with C++, html, CSS.<br>
+                    • 4 Years of experience with Python & JavaScript.<br>
+                    • Experience with Microcontrollers (ESP32 / Arduino) and Internet of Things (IoT) programming.<br>
+                    • Experience designing and training supervised & unsupervised AI models.<br>
+                    • Auxillary skills include concrete software design principles, circuit design, Microsoft Suite, Database skills, etc.<br>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
         </div>
 
         <!-- <div class="inline-pagination">
@@ -123,7 +196,7 @@
             <button id="nextPage" style="margin-right: 1em;" onclick="scrollToSection('overview')">Next</button>
         </div>  -->
     </div>
-
+</div>
     <script src="js/navbar_height.js" defer></script>
     <script src="js/portfolio_traversal.js"></script>
 </body>
