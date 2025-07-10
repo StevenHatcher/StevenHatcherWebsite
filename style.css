@@ -116,6 +116,12 @@ body {
     background-color: #171717b2;
   }
 
+  .tile.no-hover:hover {
+    transform: scale(1);
+    /* transform: scale(1.015);
+    box-shadow: 0 6px 12px rgba(24, 24, 24, 0.3);
+    background-color: #171717b2; */
+  }
 
   /* Styling for the image inside the tile */
   img{
@@ -264,7 +270,7 @@ img.fourty-percent{
   }
 
   img.eighty-percent, .section-tile.eighty-percent{
-    width: 200%;
+    width: 80%;
     /* height: auto; */
     margin: 0 auto;  /* Center the image */
   }
@@ -275,6 +281,11 @@ img.fourty-percent{
     margin: 0 auto;  /* Center the image */
   }
 
+
+  video {
+  margin-left: 50vw;
+  /* transform: translate(-50%); */
+  }
   
   .project-detail .content {
     background-color: #ffffff;
@@ -589,7 +600,7 @@ img.fourty-percent{
     background-color: None;
     padding-top: 0.4em;
     
-    flex: 1;
+    flex: 1; 
     display: flex;
     flex-direction: column;
     align-items: LEFT;
