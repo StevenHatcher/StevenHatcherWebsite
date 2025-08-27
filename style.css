@@ -603,7 +603,7 @@ img.fourty-percent{
     flex: 1; 
     display: flex;
     flex-direction: column;
-    align-items: LEFT;
+    align-items: center;
     overflow: hidden;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -742,13 +742,19 @@ img.fourty-percent{
 
 
 h1{
-  font-size: 3.7vw;
+  font-size: 2.5vw;
   /* width: 100%; */
   margin: 0;
+  margin-bottom: .35em;
   text-align: center;
 
 }
 
+h2{
+  font-size: 1.3vw;
+  margin-top:0;
+  margin-bottom: 3em;
+}
 
 .mobile-nav-menu{
   display: none;
